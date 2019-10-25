@@ -3,3 +3,6 @@ node_js:
   - "node"
 before_install:
   - cd play-our-song
+after_success:
+  - npm run build
+  - npm install -g firebase-tools
