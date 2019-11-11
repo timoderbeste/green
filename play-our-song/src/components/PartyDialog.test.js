@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PartyDialog from './components/PartyDialog';
+import PartyDialog from './PartyDialog';
 
 
 it('renders without crashing', () => {
