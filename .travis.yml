@@ -6,9 +6,3 @@ before_install:
 after_success:
   - npm run build
   - npm install -g firebase-tools
-
-before_script:
-  - npm install firebase-tools -g
-
-script:
-  - firebase deploy --only hosting --token "1//04JQIxwU_RyAiCgYIARAAGAQSNwF-L9IrEVKZxebFV521Z5HdZXfjrTgTEpUwY6I_u1tVCR3j42YoTLoW4l4lQeIDzvR5H_WMk5s"
