@@ -19,10 +19,10 @@ const PartyDialog =() =>{
 	const handleChange = () => event => {
     ctx.playlistTitle[1](event.target.value);
 	}
-	
+
 	return (
-    <div>      
-      <Dialog open={ctx.open[0]} onClose={() => ctx.open[1](false)} aria-labelledby="form-dialog-title">
+    <div>
+      <Dialog open={ctx ? ctx.open[0] : false} onClose={() => ctx.open[1](false)} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Generate your playlist in one step</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -32,13 +32,13 @@ const PartyDialog =() =>{
             autoFocus
             margin="dense"
             label="Playlist Title"
-        	onChange={handleChange()}            
+        	onChange={handleChange()}
             fullWidth
           />
           <CheckboxesGroup/>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" color="primary"  onClick={() => ctx.open[1](false)} color="primary">
+          <Button variant="contained" color="primary"  onClick={() => ctx ? ctx.open[1](false) : null} color="primary">
             Generate
           </Button>
         </DialogActions>

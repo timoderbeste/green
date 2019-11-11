@@ -28,8 +28,8 @@ const TopBar = ({ queuedTracks, forceUpdate }) => {
                   PlayOurSong
                 </Typography>
                 <div className={classes.grow} />
-                <Button variant="contained" color="primary" onClick={() => ctx.open[1](true)}>
-                {ctx.playlistTitle[0]}
+                <Button variant="contained" color="primary" onClick={() => ctx ? ctx.open[1](true) : null}>
+                {ctx ? ctx.playlistTitle[0] : ''}
                 </Button>
 
                 {/*
