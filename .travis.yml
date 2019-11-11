@@ -6,3 +6,7 @@ before_install:
 after_success:
   - npm run build
   - npm install -g firebase-tools
+deploy:
+  provider: firebase
+  token:
+    secure: "1//0436kYC2f3ifPCgYIARAAGAQSNwF-L9IrQgDZFlXJb1KeMU4fnQA6JQHNniHSbW2x9fL2hp157jjm87k7b-OTlPOiYNTDB5xEmGU"
