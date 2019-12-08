@@ -21,11 +21,11 @@ const PartyDialog =() =>{
 	}
 
 	return (
-    <div>
+    <div data-testid={'party-dialog'}>
       <Dialog open={ctx ? ctx.open[0] : false} onClose={() => ctx.open[1](false)} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Generate your playlist in one step</DialogTitle>
         <DialogContent>
-          <DialogContentText>
+          <DialogContentText data-testid={'party-dialog-content'}>
             To generate your playlist, please enter the title of your playlist and the type of your event.
           </DialogContentText>
           <TextField
@@ -38,7 +38,7 @@ const PartyDialog =() =>{
           <CheckboxesGroup/>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" color="primary"  onClick={() => ctx ? ctx.open[1](false) : null} color="primary">
+          <Button data-testid={'generate-button'} variant="contained" color="primary"  onClick={() => ctx ? ctx.open[1](false) : null} color="primary">
             Generate
           </Button>
         </DialogActions>
